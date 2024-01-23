@@ -7,7 +7,7 @@ import menuBackBar from "../assets/navbarMenu.svg"
 const Navbar = () => {
   return (
     <Box display="flex" width="100%" justifyContent="space-between">
-        <Box display="flex" gap="0.7rem" mt="2.2rem">
+        <Box display="flex" gap="0.7rem" mt="2.2rem" ml="3rem">
             <Image
             src={logoSvg}
             alt=""

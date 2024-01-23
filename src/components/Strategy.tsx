@@ -11,8 +11,8 @@ import tickIcon from "../assets/tickIcon.svg"
 import Image from "next/image";
 const Strategy = () => {
   return (
-    <Box padding="64px" >
-        <Box background="#3F4669" padding="48px" borderRadius="12px" width="70%">
+    <Box paddingLeft="256px" mb="2rem">
+        <Box background="#3F4669" padding="48px" borderRadius="12px" width="905px">
             <Text fontSize="24px" fontWeight="500" lineHeight="24px" letterSpacing="1px" color="#D2D6EF">
                 Strategy
             </Text>
