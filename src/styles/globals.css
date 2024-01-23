@@ -1,8 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto Mono', monospace;
 }
 
 html,
@@ -26,4 +27,111 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.toggleContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+  border: 1px solid #30354F;
+  border-radius: 12px;
+  background: linear-gradient(0deg, #30354F 0%, #30354F 100%);
+  font-weight: bold;
+  font-size: 12px;
+  color: #D2D6EF;
+  cursor: pointer;
+}
+.toggleContainer::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0%;
+  border-radius:12px;
+  background: linear-gradient(135deg, #5E6488 0%, #424869 100%);;
+  transition: all 0.3s;
+}
+.toggleCheckbox:checked + .toggleContainer::before {
+   left: 50%;
+   color: #D2D6EF;
+}
+.toggleContainer div {
+  padding: 8px 12px 8px 12px;
+  text-align: center;
+  z-index: 1;
+  color: #D2D6EF;
+  
+}
+.toggleCheckbox {
+  display: none;
+  color: #D2D6EF;
+}
+.toggleCheckbox:checked + .toggleContainer div:first-child {
+  color: #D2D6EF;
+  opacity: 0.3; /* Full opacity for the selected side */
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.toggleCheckbox:checked + .toggleContainer div:last-child {
+  color: #D2D6EF;
+  opacity: 1; /* Opacity of 0.3 for the unselected side */
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.toggleCheckbox + .toggleContainer div:first-child {
+  color: #D2D6EF;
+  opacity: 1; /* Full opacity for the default state */
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.toggleCheckbox + .toggleContainer div:last-child {
+  color: #D2D6EF;
+  opacity: 0.3; /* Opacity of 0.3 for the unselected default state */
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.toggle {
+	cursor: pointer;
+	display: inline-block;
+}
+.toggle-switch {
+	display: inline-block;
+	background: #30354F;
+	border-radius: 16px;
+	width: 38px;
+	height: 19px;
+	position: relative;
+	vertical-align: middle;
+	transition: background 0.25s;
+	&:before,
+	&:after {
+		content: "";
+	}
+	&:before {
+		display: block;
+		background: linear-gradient(to bottom, #495076 0%,#424869 100%);
+		border-radius: 50%;
+		box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
+		width: 19px;
+		height: 19px;
+		position: absolute;
+		top: 1px;
+		left: 0px;
+		transition: left 0.25s;
+	}
+	.toggle:hover &:before {
+		background: linear-gradient(to bottom, #495076 0%,#424869 100%);
+		box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
+	}
+	.toggle-checkbox:checked + & {
+		background: linear-gradient(90deg, #7662C4 0%, #5458F6 100%);
+		&:before {
+			left: 20px;
+		}
+	}
+}
+.toggle-checkbox {
+	position: absolute;
+	visibility: hidden;
 }

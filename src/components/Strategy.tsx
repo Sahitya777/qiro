@@ -11,13 +11,13 @@ import tickIcon from "../assets/tickIcon.svg"
 import Image from "next/image";
 const Strategy = () => {
   return (
-    <Box paddingLeft="256px" mb="2rem">
-        <Box background="#3F4669" padding="48px" borderRadius="12px" width="905px">
+    <Box paddingLeft="256px" mb="2rem" mt="1rem" >
+        <Box background="#3F4669" padding="48px" borderRadius="12px" width="918px" >
             <Text fontSize="24px" fontWeight="500" lineHeight="24px" letterSpacing="1px" color="#D2D6EF">
                 Strategy
             </Text>
             <Text mt="2rem" fontSize="18px" width="650px" fontWeight="400" lineHeight="28px" letterSpacing="2px" color="#D2D6EF">
-                Investing in this vault will lock up your stable asset <br/> and use the yield to invest into (ETH).
+                Investing in this vault will lock up your stable asset  and use the yield to invest into (ETH).
             </Text>
             <Box mt="2rem" display="flex">
                     <Box>
@@ -61,7 +61,7 @@ const Strategy = () => {
                             <Text fontSize="14px" fontWeight="700" letterSpacing="1px" color="#D2D6EF" mt="0.1rem">
                                 Earn:
                             </Text>
-                            <Text fontSize="14px" fontWeight="400" letterSpacing="1px" color="#D2D6EF" mt="0.1rem" ml="0.9rem"> ETH </Text>
+                            <Text fontSize="14px" fontWeight="400" letterSpacing="1px" color="#D2D6EF" mt="0.1rem" ml="1.2rem"> ETH </Text>
                         </Box>
                     </Box>
                 </Box>
